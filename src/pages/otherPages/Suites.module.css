@@ -1,0 +1,152 @@
+.container {
+  position: relative;
+  padding-top: 170px;
+  width: 100dvw;
+  padding-bottom: 50px;
+}
+
+.container p {
+  letter-spacing: 1.2px;
+  line-height: 25px;
+  width: 60dvw;
+  position: relative;
+  margin: 0 auto 50px;
+}
+
+.rooms {
+  width: 90dvw;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+
+.room {
+  position: relative;
+  border-radius: 15px;
+  height: 280px;
+  width: 380px;
+  filter: saturate(0);
+  transition: all 0.3s;
+}
+
+.room:hover {
+  transform: scale(1.05);
+  filter: saturate(1.1);
+}
+
+.room:hover .cover h3 {
+  top: 46%;
+  text-shadow: 0 0 3px #000;
+}
+
+.room:hover .cover {
+  background-image: linear-gradient(0deg, #000000ef, transparent);
+}
+
+.room img {
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+  object-position: center center;
+  object-fit: cover;
+}
+
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  background-image: linear-gradient(0deg, #000000d2, transparent);
+}
+
+.cover h3 {
+  font-size: 24px;
+  font-weight: 100;
+  width: 240px;
+  position: relative;
+  letter-spacing: 0.9px;
+  top: 85%;
+  text-align: center;
+  margin: 0 auto;
+  transition: all 0.3s;
+}
+
+@media screen and (max-width: 1250px) {
+  .room {
+    width: 290px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container p {
+    width: 85dvw;
+    font-size: 14px;
+  }
+
+  .room {
+    height: 240px;
+    width: 260px;
+  }
+
+  .cover h3 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    position: relative;
+  }
+  .rooms {
+    width: 90dvw;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .room {
+    margin: 40px 0;
+  }
+
+  .cover h3 {
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .room {
+    height: 200px;
+    width: 220px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .room {
+    margin: 80px 0;
+  }
+
+  .container p {
+    font-size: 20px;
+    margin-top: 60px;
+    letter-spacing: 1.4px;
+    line-height: 30px;
+    width: 60vw;
+  }
+
+  .room {
+    position: relative;
+    border-radius: 25px;
+    height: 380px;
+    width: 480px;
+  }
+
+  .cover h3 {
+    font-size: 32px;
+    width: 280px;
+  }
+}

@@ -1,0 +1,13 @@
+.container {
+  min-height: 80vh;
+  width: 100%;
+  background-color: #000;
+  color: aliceblue;
+  position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    min-height: 85vh;
+  }
+}

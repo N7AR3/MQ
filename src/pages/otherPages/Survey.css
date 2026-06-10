@@ -1,0 +1,595 @@
+.cls-1 {
+  fill: #0026ff;
+}
+.cls-2 {
+  fill: #eeff00;
+}
+.cls-3 {
+  fill: #d8a200;
+}
+
+.heading {
+  height: 100px;
+  width: 70vw;
+  margin: 25px auto 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.heading input {
+  height: 35px;
+  width: 220px;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1600px) {
+  .heading {
+    height: 140px;
+    width: 60vw;
+    margin: 5px auto 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heading input {
+    margin: 10px 0 10px;
+  }
+}
+
+.form-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000;
+}
+
+.rating-form {
+  padding-top: 120px;
+  position: relative;
+  border: 1px solid #222222;
+  min-height: 100vh;
+  margin: 0 20px;
+  border-radius: 20px;
+  background-color: #1d1d1d;
+  color: #fff;
+  text-align: center;
+}
+
+.rating-form section {
+  padding: 1rem;
+  padding-top: 2rem;
+}
+
+.rating-form h2 {
+  font-size: 30px;
+  letter-spacing: 1.5px;
+  line-height: 50px;
+  color: #edbd31;
+  width: 70dvw;
+  margin: 3rem auto 3rem;
+}
+
+.rating-form h4 {
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  line-height: 50px;
+  width: 70dvw;
+  margin: 0 auto 3rem;
+}
+
+.rating-form hr {
+  margin: 2rem auto 0;
+  width: 70vw;
+
+}
+
+.rating-form textarea {
+  margin-top: 1rem;
+  display: block;
+  margin: 0 auto;
+  width: 50vw;
+  height: 150px;
+  padding: 1rem;
+}
+
+.rating-form-submit {
+  margin-top: 1rem;
+  font-size: 16px;
+  height: 3rem;
+  width: 6rem;
+  display: block;
+  margin: 1rem auto;
+  background-color: rgb(123, 0, 0);
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 2000px) {
+  .rating-form-submit {
+    font-size: 20px;
+  }
+}
+
+.rating-form-submit:hover {
+  background-color: rgb(177, 0, 0);
+}
+
+.rating-container {
+  transform: scale(0.8);
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  margin: 0 auto;
+  gap: 4px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 30px;
+  border: none;
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 2px 2px rgba(0, 0, 0, 0.075),
+    0 4px 4px rgba(0, 0, 0, 0.075), 0 8px 8px rgba(0, 0, 0, 0.075),
+    0 16px 16px rgba(0, 0, 0, 0.075);
+}
+
+@media screen and (max-width: 1000px) {
+  .rating-form textarea {
+    width: 80vw;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .rating-container {
+    transform: scale(0.6);
+  }
+
+  .rating-form h4 {
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: 1.5px;
+    width: 82vw;
+  }
+}
+
+.rating-container .rating-value {
+  position: absolute;
+  top: 0px;
+  left: -60px;
+  border-radius: 10px 0px 0px 10px;
+  font-size: 14px;
+  height: 66px;
+  width: 60px;
+  background: rgb(177, 0, 0);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.rating-container .rating-value:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  line-height: 60px;
+  font-size: 2.5em;
+  color: #fff;
+  content: "0";
+  transform-origin: "center center";
+  transition: all 0.25s ease 0s;
+}
+.rating-container .rating-value:after {
+  content: "";
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  top: -1px;
+  left: -1px;
+  margin: auto;
+  border: 10px solid rgb(177, 0, 0);
+  border-radius: 10px 0px 0px 10px;
+  transition: all 0.4s ease-in;
+}
+.rating-container input {
+  display: none;
+}
+.rating-container label {
+  height: 50px;
+  width: 50px;
+  transform-origin: "center center";
+}
+.rating-container label svg {
+  transition: transform 0.4s ease-in-out;
+  opacity: 0.5;
+}
+.rating-container label:hover svg {
+  transform: scale(1.25) rotate(10deg);
+}
+
+input:checked ~ label svg {
+  opacity: 1;
+  transform: scale(1.25) rotate(10deg);
+}
+
+label:hover svg,
+label:hover ~ label svg {
+  opacity: 1;
+  transform: scale(1.25) rotate(10deg);
+}
+
+input:checked + label:hover svg {
+  opacity: 1;
+}
+input:checked ~ label:hover svg,
+input:checked ~ label:hover ~ label svg {
+  opacity: 1;
+}
+
+label:hover ~ input:checked ~ label svg {
+  opacity: 1;
+}
+
+/* rate 1 */
+
+#rate1:checked ~ .rating-value:before {
+  content: "1";
+  font-size: 2.75em;
+}
+
+label[for="rate1"]:hover ~ .rating-value:before {
+  content: "1" !important;
+  font-size: 2.75em !important;
+}
+
+#rate2:checked ~ .rating-value:before {
+  content: "2";
+  font-size: 3em;
+}
+
+label[for="rate2"]:hover ~ .rating-value:before {
+  content: "2" !important;
+  font-size: 3em !important;
+}
+
+#rate3:checked ~ .rating-value:before {
+  content: "3";
+  font-size: 3.25em;
+}
+
+label[for="rate3"]:hover ~ .rating-value:before {
+  content: "3" !important;
+  font-size: 3.25em !important;
+}
+
+#rate4:checked ~ .rating-value:before {
+  content: "4";
+  font-size: 3.5em;
+}
+
+label[for="rate4"]:hover ~ .rating-value:before {
+  content: "4" !important;
+  font-size: 3.5em !important;
+}
+
+#rate5:checked ~ .rating-value:before {
+  content: "5";
+  font-size: 3.75em;
+}
+
+@keyframes pulse {
+  0% {
+    height: 60px;
+    width: 60px;
+    top: -1px;
+    left: -1px;
+    opacity: 1;
+  }
+  100% {
+    height: 90px;
+    width: 90px;
+    top: -16px;
+    left: -16px;
+    opacity: 0;
+  }
+}
+#rate5:checked ~ .rating-value:after {
+  animation: pulse 0.4s ease-out 1;
+}
+
+label[for="rate5"]:hover ~ .rating-value:before {
+  content: "5" !important;
+  font-size: 3.75em !important;
+}
+
+/* rate 2 */
+
+#rate1_2:checked ~ .rating-value:before {
+  content: "1";
+  font-size: 2.75em;
+}
+
+label[for="rate1_2"]:hover ~ .rating-value:before {
+  content: "1" !important;
+  font-size: 2.75em !important;
+}
+
+#rate2_2:checked ~ .rating-value:before {
+  content: "2";
+  font-size: 3em;
+}
+
+label[for="rate2_2"]:hover ~ .rating-value:before {
+  content: "2" !important;
+  font-size: 3em !important;
+}
+
+#rate3_2:checked ~ .rating-value:before {
+  content: "3";
+  font-size: 3.25em;
+}
+
+label[for="rate3_2"]:hover ~ .rating-value:before {
+  content: "3" !important;
+  font-size: 3.25em !important;
+}
+
+#rate4_2:checked ~ .rating-value:before {
+  content: "4";
+  font-size: 3.5em;
+}
+
+label[for="rate4_2"]:hover ~ .rating-value:before {
+  content: "4" !important;
+  font-size: 3.5em !important;
+}
+
+#rate5_2:checked ~ .rating-value:before {
+  content: "5";
+  font-size: 3.75em;
+}
+
+#rate5_2:checked ~ .rating-value:after {
+  animation: pulse 0.4s ease-out 1;
+}
+
+label[for="rate5_2"]:hover ~ .rating-value:before {
+  content: "5" !important;
+  font-size: 3.75em !important;
+}
+
+/* rate 3 */
+
+#rate1_3:checked ~ .rating-value:before {
+  content: "1";
+  font-size: 2.75em;
+}
+
+label[for="rate1_3"]:hover ~ .rating-value:before {
+  content: "1" !important;
+  font-size: 2.75em !important;
+}
+
+#rate2_3:checked ~ .rating-value:before {
+  content: "2";
+  font-size: 3em;
+}
+
+label[for="rate2_3"]:hover ~ .rating-value:before {
+  content: "2" !important;
+  font-size: 3em !important;
+}
+
+#rate3_3:checked ~ .rating-value:before {
+  content: "3";
+  font-size: 3.25em;
+}
+
+label[for="rate3_3"]:hover ~ .rating-value:before {
+  content: "3" !important;
+  font-size: 3.25em !important;
+}
+
+#rate4_3:checked ~ .rating-value:before {
+  content: "4";
+  font-size: 3.5em;
+}
+
+label[for="rate4_3"]:hover ~ .rating-value:before {
+  content: "4" !important;
+  font-size: 3.5em !important;
+}
+
+#rate5_3:checked ~ .rating-value:before {
+  content: "5";
+  font-size: 3.75em;
+}
+
+#rate5_3:checked ~ .rating-value:after {
+  animation: pulse 0.4s ease-out 1;
+}
+
+label[for="rate5_3"]:hover ~ .rating-value:before {
+  content: "5" !important;
+  font-size: 3.75em !important;
+}
+
+/* rate 4 */
+
+#rate1_4:checked ~ .rating-value:before {
+  content: "1";
+  font-size: 2.75em;
+}
+
+label[for="rate1_4"]:hover ~ .rating-value:before {
+  content: "1" !important;
+  font-size: 2.75em !important;
+}
+
+#rate2_4:checked ~ .rating-value:before {
+  content: "2";
+  font-size: 3em;
+}
+
+label[for="rate2_4"]:hover ~ .rating-value:before {
+  content: "2" !important;
+  font-size: 3em !important;
+}
+
+#rate3_4:checked ~ .rating-value:before {
+  content: "3";
+  font-size: 3.25em;
+}
+
+label[for="rate3_4"]:hover ~ .rating-value:before {
+  content: "3" !important;
+  font-size: 3.25em !important;
+}
+
+#rate4_4:checked ~ .rating-value:before {
+  content: "4";
+  font-size: 3.5em;
+}
+
+label[for="rate4_4"]:hover ~ .rating-value:before {
+  content: "4" !important;
+  font-size: 3.5em !important;
+}
+
+#rate5_4:checked ~ .rating-value:before {
+  content: "5";
+  font-size: 3.75em;
+}
+
+#rate5_4:checked ~ .rating-value:after {
+  animation: pulse 0.4s ease-out 1;
+}
+
+label[for="rate5_4"]:hover ~ .rating-value:before {
+  content: "5" !important;
+  font-size: 3.75em !important;
+}
+
+/* rate 5 */
+
+#rate1_5:checked ~ .rating-value:before {
+  content: "1";
+  font-size: 2.75em;
+}
+
+label[for="rate1_5"]:hover ~ .rating-value:before {
+  content: "1" !important;
+  font-size: 2.75em !important;
+}
+
+#rate2_5:checked ~ .rating-value:before {
+  content: "2";
+  font-size: 3em;
+}
+
+label[for="rate2_5"]:hover ~ .rating-value:before {
+  content: "2" !important;
+  font-size: 3em !important;
+}
+
+#rate3_5:checked ~ .rating-value:before {
+  content: "3";
+  font-size: 3.25em;
+}
+
+label[for="rate3_5"]:hover ~ .rating-value:before {
+  content: "3" !important;
+  font-size: 3.25em !important;
+}
+
+#rate4_5:checked ~ .rating-value:before {
+  content: "4";
+  font-size: 3.5em;
+}
+
+label[for="rate4_5"]:hover ~ .rating-value:before {
+  content: "4" !important;
+  font-size: 3.5em !important;
+}
+
+#rate5_5:checked ~ .rating-value:before {
+  content: "5";
+  font-size: 3.75em;
+}
+
+#rate5_5:checked ~ .rating-value:after {
+  animation: pulse 0.4s ease-out 1;
+}
+
+label[for="rate5_5"]:hover ~ .rating-value:before {
+  content: "5" !important;
+  font-size: 3.75em !important;
+}
+
+/* rate 6 */
+
+#rate1_6:checked ~ .rating-value:before {
+  content: "1";
+  font-size: 2.75em;
+}
+
+label[for="rate1_6"]:hover ~ .rating-value:before {
+  content: "1" !important;
+  font-size: 2.75em !important;
+}
+
+#rate2_6:checked ~ .rating-value:before {
+  content: "2";
+  font-size: 3em;
+}
+
+label[for="rate2_6"]:hover ~ .rating-value:before {
+  content: "2" !important;
+  font-size: 3em !important;
+}
+
+#rate3_6:checked ~ .rating-value:before {
+  content: "3";
+  font-size: 3.25em;
+}
+
+label[for="rate3_6"]:hover ~ .rating-value:before {
+  content: "3" !important;
+  font-size: 3.25em !important;
+}
+
+#rate4_6:checked ~ .rating-value:before {
+  content: "4";
+  font-size: 3.5em;
+}
+
+label[for="rate4_6"]:hover ~ .rating-value:before {
+  content: "4" !important;
+  font-size: 3.5em !important;
+}
+
+#rate5_6:checked ~ .rating-value:before {
+  content: "5";
+  font-size: 3.75em;
+}
+
+#rate5_6:checked ~ .rating-value:after {
+  animation: pulse 0.4s ease-out 1;
+}
+
+label[for="rate5_6"]:hover ~ .rating-value:before {
+  content: "5" !important;
+  font-size: 3.75em !important;
+}
+
+.hero-box-link {
+  color: #000;
+  text-align: center;
+}

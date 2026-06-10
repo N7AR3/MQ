@@ -1,0 +1,133 @@
+.container {
+  height: 100dvh;
+  width: 100dvw;
+  position: fixed;
+  transform: translateY(-100%);
+  background-color: #0e1418;
+  z-index: 100;
+  transition: transform 0.5s ease-in-out;
+}
+
+.containerOpen {
+  height: 100dvh;
+  width: 100dvw;
+  position: fixed;
+  background-color: #0e1418;
+  z-index: 100;
+  transition: transform 0.5s ease-in-out;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 150px;
+  background-color: #000;
+}
+
+.bottomBtns {
+  position: relative;
+  margin-top: 30px !important;
+  color: #fff;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottomBtns span {
+  background-color: rgb(33, 31, 29);
+  height: 40px;
+  padding-top: 10px;
+  width: 120px;
+  text-align: center;
+  font-size: 16px;
+  border: 2px solid #fff;
+}
+
+.lan {
+  position: relative;
+  width: 55px;
+  height: 30px;
+  margin: 30px auto;
+}
+
+.links {
+  width: 90dvw;
+  position: relative;
+  margin: 0 auto;
+  overflow-y: scroll;
+  height: 60dvh;
+  list-style: none;
+}
+
+.links li {
+  position: relative;
+  color: #fff;
+  font-size: 25px;
+  margin-top: 25px;
+}
+
+.links li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.subMenu {
+  margin-top: 20px;
+  border-bottom: 2px solid #fff;
+  border-top: 2px solid #fff;
+  list-style: none;
+}
+
+.subMenuClose {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+.subMenu li {
+  margin: 30px 30px;
+}
+
+.btnOwner {
+  position: relative;
+  display: inline;
+}
+
+.btn {
+  position: absolute;
+  right: -60px;
+  top: -5px;
+  height: 40px;
+  width: 40px;
+  transform: rotate(180deg);
+  transition: all 0.3s;
+}
+
+.btn img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.navMimik {
+  height: 90px;
+}
+
+.footerMimik {
+  height: 15dvh;
+}
+
+@media screen and (min-width: 1200px) {
+  .containerOpen {
+    transform: translateY(-100%);
+  }
+}
+
+@media screen and (min-height: 700px) {
+  .links {
+    height: 70dvh;
+  }
+}

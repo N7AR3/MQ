@@ -1,0 +1,259 @@
+.container {
+  z-index: 101;
+  position: relative;
+  width: 100vw;
+  height: 80px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.nav {
+  display: flex;
+  max-width: 1250px;
+  margin: 0 auto;
+  align-items: center;
+  position: relative;
+}
+
+.links {
+  display: flex;
+  list-style: none;
+}
+
+.links li {
+  position: relative;
+  margin-left: 34px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: border-bottom 0.3s;
+  letter-spacing: 1.5px;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.links li a {
+  height: 100%;
+  width: 100%;
+  font-size: 12px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.links li:hover {
+  color: #ff3d3d;
+}
+
+.links li:hover a {
+  color: #ff3d3d;
+}
+
+.links li::after {
+  content: "";
+  z-index: 99;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 18px;
+  transform: rotateY(90deg);
+  transition: transform 0.9s;
+  border-bottom: 0px solid #ff3d3d;
+}
+.links li:hover:after {
+  transform: rotateY(0deg);
+  border-bottom: 2px solid #ff3d3d;
+}
+
+.selectedLink::after {
+  content: "";
+  transform: rotateY(0deg) !important;
+  border-bottom: 2px solid #f9f9f9 !important;
+}
+
+.selectedLink:hover::after {
+  border-bottom: 2px solid #ff3d3d !important;
+}
+
+@media only screen and (max-width: 1200px) {
+  .links {
+    display: none;
+  }
+
+  .container {
+    background-color: #212529;
+  }
+}
+
+.logo {
+  height: 80px;
+  width: 80px;
+  margin-right: 40px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+.mobileNavBtn {
+  color: #fff;
+  transform: rotate(90deg);
+  height: 40px;
+  width: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.mobileNavBtn span {
+  position: relative;
+  display: inline-block;
+  border: 2px solid #fff;
+  margin: 5px 5px 0;
+  height: 34px;
+  opacity: 0;
+  transition: all 0.1s;
+}
+
+.mobileNavBtn::before {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  display: inline-block;
+  content: "";
+  height: 34px;
+  border: 2px solid #fff;
+  transform: rotate(45deg) translate(-50%, -50%);
+  transition: all 0.3s;
+}
+
+.mobileNavBtn::after {
+  position: absolute;
+  top: -5px;
+  right: 22.5px;
+  display: inline-block;
+  content: "";
+  height: 34px;
+  border: 2px solid #fff;
+  transform: rotate(135deg) translate(-50%, -50%);
+  transition: all 0.3s;
+}
+
+.mobileNavBtnClose {
+  color: #fff;
+  transform: rotate(90deg);
+  height: 40px;
+  width: 30px;
+  margin-top: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.mobileNavBtnClose span {
+  position: relative;
+  display: inline-block;
+  border: 2px solid #fff;
+  margin: 5px 5px 0;
+  height: 34px;
+  opacity: 1;
+  transition: all 0.1s;
+}
+
+.mobileNavBtnClose::before {
+  display: inline-block;
+  content: "";
+  height: 34px;
+  border: 2px solid #fff;
+  transition: all 0.3s;
+}
+
+.mobileNavBtnClose::after {
+  display: inline-block;
+  content: "";
+  height: 34px;
+  border: 2px solid #fff;
+  transition: all 0.3s;
+}
+
+@media screen and (min-width: 1200px) {
+  .mobileNavBtn {
+    display: none;
+  }
+
+  .mobileNavBtnClose {
+    display: none;
+  }
+}
+
+.aboutUs {
+  height: 20px;
+  z-index: 50;
+}
+
+.aboutUs:hover .aboutUsList {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  transform: scale(1);
+}
+
+.aboutUsList {
+  z-index: 45;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  top: 20px;
+  background-color: #212529;
+  transform: scale(0.01);
+  transition: all 0.3s;
+}
+
+.aboutUsList ul {
+  width: 150px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.aboutUsList li {
+  margin-left: 0;
+  padding: 10px;
+  border-bottom: 2px solid #fff;
+}
+
+.aboutUsList li:hover:after {
+  border: none;
+}
+
+.childLink {
+  color: #fff !important;
+}
+
+.childLink:hover {
+  color: #7b0000 !important;
+}
+
+@media screen and (min-width: 2000px) {
+  .aboutUsList ul {
+    width: 160px;
+  }
+  .nav {
+    max-width: 75dvw;
+  }
+
+  .links li {
+    font-size: 14px;
+  }
+
+  .links li a {
+    font-size: 14px;
+  }
+}

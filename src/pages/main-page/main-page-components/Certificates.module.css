@@ -1,0 +1,86 @@
+.container {
+  width: 100vw;
+  min-height: 500px;
+  background-color: #000;
+  position: relative;
+}
+
+.main {
+  position: relative;
+  top: 60px;
+  padding: 50px 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.box {
+  width: 250px;
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+  padding-top: 20px;
+  font-size: 14px;
+  text-align: center;
+  font-family: "RedditSans-Bold";
+  letter-spacing: 2px;
+  margin: 15px 20px;
+  filter: saturate(0);
+  transition: all 0.3s;
+}
+
+.box p {
+  margin-top: 20px;
+  line-height: 24px;
+}
+
+.box:hover {
+  transform: scale(1.1);
+  filter: saturate(1.1);
+}
+
+.imgContainer {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+  object-position: center center;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 900px) {
+  .box {
+    width: 140px;
+    padding-top: 20px;
+    font-size: 16px;
+    margin: 25px 0px;
+  }
+
+  .imgContainer {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .box {
+    letter-spacing: 3px;
+    margin: 15px 20px;
+  }
+
+  .imgContainer {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .box p {
+    margin-top: 20px;
+    line-height: 30px;
+  }
+}

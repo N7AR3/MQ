@@ -1,0 +1,133 @@
+.imgContainer {
+  padding-top: 70px;
+  position: relative;
+  min-height: 95vh;
+  width: 100vw;
+  margin: 0 auto;
+  opacity: 0;
+}
+
+@media screen and (max-width: 1367px) {
+  .imgContainer {
+    padding-top: 140px;
+  }
+}
+
+@media screen and (max-width: 1290px) {
+  .imgContainer {
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .imgContainer {
+    padding-top: 160px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .imgContainer {
+    padding-top: 180px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .imgContainer {
+    padding-top: 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .imgContainer {
+    padding-top: 400px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .imgContainer {
+    padding-top: 500px;
+  }
+}
+
+.img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.lights {
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.blackCover {
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
+  background-color: black;
+  transition: all 0.4s;
+  opacity: 0.5;
+}
+
+.movementBoxs {
+  position: absolute;
+  z-index: 98;
+  height: 100%;
+  top: 0;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.movementBox {
+  margin-top: 200px;
+  width: 35%;
+  height: 50%;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.p {
+  position: absolute;
+  top: 220px;
+  left: calc(50% - (40dvw / 2));
+  z-index: 80;
+  width: 40dvw;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 25px;
+  text-shadow: 0px 0px 2px #000;
+}
+
+@media screen and (max-width: 1200px) {
+  .p {
+    top: 200px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .p {
+    top: 250px;
+    width: 80dvw;
+    left: calc(50% - (80dvw / 2));
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .p {
+    margin-top: 50px;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: 2px;
+  }
+}

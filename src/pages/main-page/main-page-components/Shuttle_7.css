@@ -1,0 +1,64 @@
+@keyframes signalLights {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes headLights {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.lights-on {
+  animation: 0.7s linear 0s infinite;
+  animation-name: signalLights;
+}
+
+.black-cover {
+  animation: 3s linear 0s forwards;
+  animation-name: slideIn;
+}
+
+.head-lights {
+  animation: 1s linear 0s forwards;
+  animation-name: headLights;
+}
+
+.head-lights-out {
+  animation: 1s linear 0s forwards;
+  animation-name: slideOut;
+}

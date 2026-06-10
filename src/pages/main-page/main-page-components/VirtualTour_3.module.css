@@ -1,0 +1,154 @@
+.container {
+  padding-top: 270px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+  height: 480px;
+  max-width: 80dvw;
+  display: flex;
+  min-height: 700px;
+}
+
+.left {
+  position: relative;
+  height: 100%;
+  width: 60%;
+}
+
+.right {
+  position: relative;
+  height: 100%;
+  width: 40%;
+}
+
+.circle {
+  z-index: 1;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background-size: cover;
+  background-image: radial-gradient(transparent, #000000c1, #000);
+  object-fit: cover;
+  object-position: center center;
+  filter: saturate(2);
+  box-shadow: 0px 0px 10px #2d2d2d;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.circle img {
+  height: 100%;
+  width: 100%;
+}
+
+.circle h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  text-shadow: 75px -15px 40px #000000;
+  transition: all 0.7s;
+}
+
+.circle:hover {
+  background-image: radial-gradient(#ffffff2f, #000000b9, #000);
+  height: 300px;
+  width: 300px;
+  box-shadow: 0px 0px 0px #000000;
+}
+
+.circle:hover h3 {
+  font-size: 70px;
+  text-shadow: 6px 1px 1px #0f0f0f;
+}
+
+.left p {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  line-height: 35px;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width: 1200px) {
+  .circle {
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 20px #ffffff;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    min-height: 800px;
+    padding-top: 190px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .circle {
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0px 0px 20px #ffffff;
+  }
+
+  .circle:hover {
+    height: 200px;
+    width: 200px;
+    box-shadow: 0px 0px 50px #ffffff;
+  }
+
+  .circle h3 {
+    font-size: 30px;
+  }
+
+  .circle:hover h3 {
+    font-size: 40px;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .left p {
+    width: 80%;
+    position: relative;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .container {
+    min-height: 850px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .circle {
+    width: 350px;
+    height: 350px;
+    box-shadow: 0px 0px 20px #ffffff;
+  }
+
+  .circle:hover {
+    height: 400px;
+    width: 400px;
+  }
+
+  .left p {
+    font-size: 22px;
+  }
+}

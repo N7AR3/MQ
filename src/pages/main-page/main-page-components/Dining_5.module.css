@@ -1,0 +1,70 @@
+.container {
+  position: relative;
+  max-width: 1200px;
+  height: 500px;
+  padding-top: 60vh;
+  margin: 0 auto;
+  
+}
+
+.container p {
+  margin-left: 80px;
+  max-width: 900px;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px #000;
+  backdrop-filter: blur(1px);
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: -4px -4px 20px #000;
+  
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    position: relative;
+    max-width: 80dvw;
+    height: 500px;
+    padding-top: 45vh;
+    margin: 0 auto;
+  }
+
+  .container p {
+    max-width: 600px;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 2px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    position: relative;
+    max-width: 80dvw;
+    height: 500px;
+    margin: 0 auto;
+  }
+
+  .container p {
+    margin-left: 0;
+    max-width: 300px;
+    line-height: 22px;
+    letter-spacing: 1.2px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .container {
+    position: relative;
+    max-width: 80dvw;
+    height: 500px;
+    margin: 0 auto;
+  }
+
+  .container p {
+    font-size: 22px;
+    line-height: 30px;
+    max-width: 1200px;
+  }
+}

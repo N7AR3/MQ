@@ -1,0 +1,101 @@
+.lanSelect {
+  position: absolute;
+  left: 0;
+  display: flex;
+  margin-right: 10px;
+  height: 24px;
+  width: 55px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  filter: saturate(0.7);
+  transition: filter 0.3s;
+}
+
+.lanSelect:hover {
+  filter: saturate(1.5);
+}
+
+.lanSelect img {
+  width: 33px;
+  height: 100%;
+}
+
+.lanSpan {
+  color: #fff;
+  position: absolute;
+  right: 7px;
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.lanListDown {
+  z-index: 101;
+  position: absolute;
+  top: 22px;
+  left: -1px;
+  width: 55px;
+  background-color: #1e1e1e;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+}
+
+.lanList ul {
+  list-style: none;
+}
+
+.lanList li {
+  height: 35px;
+  width: 55px;
+}
+
+.lanList img {
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+  height: 90%;
+  width: 80%;
+}
+
+.lanListDownHidden {
+  height: 0px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.lanListDownHidden li {
+  margin: 10px;
+  height: 0px;
+  width: 0px;
+}
+
+.lanListDownHidden img {
+  height: 0%;
+  width: 0%;
+}
+
+.select {
+  position: absolute;
+  right: 5%;
+}
+
+.lanListUp {
+  z-index: 101;
+  position: absolute;
+  bottom: 25px;
+  left: -1px;
+  width: 55px;
+  background-color: #1e1e1e;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+}
+
+.lanListUpHidden li {
+  margin: 10px;
+  height: 0px;
+  width: 0px;
+}
+
+.lanListUpHidden img {
+  height: 0%;
+  width: 0%;
+}

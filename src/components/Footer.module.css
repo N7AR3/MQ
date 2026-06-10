@@ -1,0 +1,140 @@
+.container {
+  position: relative;
+  height: 230px;
+  width: 100dvw;
+  background-image: linear-gradient(0deg, #20272c, #000000f9);
+  padding-top: 30px;
+  z-index: 99;
+}
+
+.footer {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 80dvw;
+  margin: 0 auto;
+}
+
+.box {
+  width: 49%;
+  height: 100%;
+}
+
+.left {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.social {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 160px;
+}
+
+.imgContainer {
+  padding: 5px;
+  height: 45px;
+  width: 45px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.imgContainer img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.imgContainer:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 5px #fff;
+}
+
+.map {
+  padding: 2px;
+  background-color: #000;
+  margin-top: 10px;
+  margin-left: 30px;
+  height: 150px;
+  width: 300px;
+  box-shadow: 0 0 15px #000;
+}
+
+.copyright {
+  height: 30px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  padding-top: 7px;
+  background-color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    height: 500px;
+    padding-top: 0px;
+  }
+  .footer {
+    flex-direction: column;
+    width: 60dvw;
+    justify-content: start;
+    align-items: center;
+  }
+  .map {
+    margin: 0 auto;
+  }
+  .box {
+    width: 80%;
+  }
+  .left {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .footer {
+    width: 100dvw;
+  }
+  .box {
+    width: 90dvw;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .container {
+    height: 250px;
+    padding-top: 0px;
+  }
+  .footer {
+    width: 80dvw;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .left {
+    height: 150px;
+  }
+
+  .map {
+    padding: 2px;
+    margin-top: 0px;
+    margin-left: 30px;
+    height: 200px;
+    width: 400px;
+  }
+  .googleMap {
+    height: 100%;
+    width: 100%;
+  }
+}

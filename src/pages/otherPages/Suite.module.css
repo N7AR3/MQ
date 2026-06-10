@@ -1,0 +1,43 @@
+.container {
+  position: relative;
+  top: 30px;
+  height: calc(100dvh - 30px);
+  width: 100vw;
+}
+
+.container p {
+  position: relative;
+  top: 430px;
+  width: 70dvw;
+  letter-spacing: 1.2px;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 25px;
+  margin: 0 auto;
+  backdrop-filter: blur(4px);
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #37373738;
+  box-shadow: -4px -4px 20px #000;
+}
+
+@media screen and (max-width: 800px) {
+  .container p {
+    width: 90vw;
+    top: 60%;
+    font-size: 14px;
+  }
+}
+
+.slide {
+  min-height: 90vh;
+  background-color: #000000;
+}
+
+.slideBox {
+  margin: 0 auto;
+  height: 90vh;
+  width: 100%;
+  background-color: #000000;
+  overflow: hidden;
+}

@@ -1,0 +1,180 @@
+.container {
+  top: 270px;
+  position: relative;
+  height: 800px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.box {
+  position: relative;
+  bottom: 90px;
+  height: 550px;
+  width: 100%;
+  padding-top: 100px;
+}
+
+.selectors {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+}
+
+.selector {
+  width: 25%;
+  height: 100%;
+  border-right: 2px solid #c69c6dca;
+  border-bottom: 4px solid #c69c6d9c;
+  background-image: linear-gradient(0deg, #000000, transparent);
+  cursor: pointer;
+  transition: border 0.2s;
+}
+
+.selector:last-child {
+  border-right: none;
+}
+
+.selector:hover {
+  border-bottom: 12px solid #c69c6d9c;
+}
+
+.selected {
+  width: 25%;
+  height: 100%;
+  border-right: 2px solid #c69c6dca;
+  border-bottom: 4px solid #c69c6d9c;
+  background-image: linear-gradient(0deg, #000000, transparent);
+  cursor: pointer;
+  transition: border 0.2s;
+}
+
+.textBox {
+  padding: 40px 30px 10px;
+  position: relative;
+  z-index: 50;
+}
+
+.textBox p {
+  margin-top: 10px;
+  text-shadow: 0px 0px 5px #000;
+}
+
+.textBox h3 {
+  font-family: "RedditSans-Regular";
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 5px #000;
+}
+
+.border {
+  border-bottom: 12px solid #c69c6d9c;
+}
+
+.imgContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.imgContainer img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.imgContainerMobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  display: none;
+}
+
+.imgContainerMobileClose {
+  display: none;
+}
+
+.imgContainerMobile img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    top: 220px;
+    width: 90dvw;
+  }
+
+  .imgContainerMobile {
+    display: block;
+  }
+
+  .box {
+    bottom: 30px;
+    height: 550px;
+    padding-top: 100px;
+  }
+
+  .textBox {
+    padding: 20px 30px 10px;
+    position: relative;
+  }
+
+  .selectors {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .selector {
+    border: none;
+    width: 100%;
+    height: 25%;
+    background-color: #980000;
+  }
+
+  .selected {
+    height: 80%;
+    border: none;
+    width: 100%;
+    background-color: rgb(59, 59, 59);
+  }
+
+  .imgContainer {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .container {
+    top: 290px;
+    height: 1000px;
+  }
+
+  .box {
+    height: 650px;
+  }
+
+  .textBox {
+    margin-top: 0px;
+  }
+
+  .textBox p {
+    font-size: 22px;
+  }
+
+  .textBox h3 {
+    font-size: 28px;
+  }
+}
